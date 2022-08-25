@@ -3,3 +3,5 @@ input/
 output/
 slurmOutputs/
 core.50010
+glomOnly/
+masks/

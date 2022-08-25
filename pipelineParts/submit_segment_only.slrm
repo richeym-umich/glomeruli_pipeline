@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --account=hpcstaff
+#SBATCH --job-name=segment_only
+#SBATCH --mail-user=richeym@umich.edu
+#SBATCH --mail-type=BEGIN,END
+#SBATCH --nodes=1
+#SBATCH --gpus=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=20000m 
+#SBATCH --time=5:00:00
+#SBATCH --partition=gpu
+
+python3 segment_only.py
