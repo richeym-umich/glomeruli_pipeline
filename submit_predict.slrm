@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#SBATCH --account=markusbi0
+#SBATCH --job-name=obj_det
+#SBATCH --mail-user=richeym@umich.edu
+#SBATCH --mail-type=BEGIN,END
+#SBATCH --nodes=1
+#SBATCH --gpus=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --mem=20000m 
+#SBATCH --time=5:00:00
+#SBATCH --partition=gpu
+
+python -u predict.py 146001 '/nfs/turbo/umms-markusbi/FullNephrectomy_tifreupload/'
